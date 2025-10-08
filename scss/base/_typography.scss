@@ -1,0 +1,213 @@
+$font-primary: "Kumbh Sans", sans-serif;
+
+@mixin text {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@mixin text-small {
+  font-size: 0.875em;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin text-small-medium {
+  font-size: 0.875em;
+  font-weight: 500;
+  line-height: 1;
+}
+
+@mixin text-medium {
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: 26px;
+}
+
+@mixin link-menu {
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1;
+}
+
+@mixin title-footer {
+  font-weight: 700;
+  font-size: 0.875em;
+  line-height: 1;
+}
+
+@mixin title-section {
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 1;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
+@mixin title-card-cat {
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 28.8px;
+}
+
+@mixin text-list {
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 1;
+  text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    font-size: 1.4375em;
+  }
+}
+
+@mixin title-format {
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+@mixin text-top {
+  font-weight: 400;
+  font-size: 2em;
+  line-height: 34px;
+}
+
+@mixin title-card {
+  font-weight: 600;
+  font-size: 0.875em;
+  line-height: 1;
+}
+
+@mixin price-product {
+  font-weight: 800;
+  font-size: 1em;
+  line-height: 1;
+}
+
+@mixin btn-card-blog {
+  font-weight: 300;
+  font-size: 0.75em;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@mixin subtitle {
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 1;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
+@mixin title-intro {
+  font-weight: 400;
+  font-size: 4em;
+  line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 2.5em;
+  }
+}
+
+@mixin title-single {
+  font-weight: 400;
+  font-size: 3em;
+  line-height: 1;
+  letter-spacing: -3px;
+
+  @media (max-width: 768px) {
+    font-size: 2em;
+  }
+}
+
+@mixin btn-cat {
+  font-weight: 300;
+  font-size: 0.875em;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@mixin btn-text {
+  font-weight: 300;
+  font-size: 0.875em;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@mixin title-extra-light {
+  font-weight: 200;
+  font-size: 3em;
+  line-height: 59px;
+
+  @media (max-width: 768px) {
+    font-size: 2em;
+    line-height: 1.5;
+  }
+}
+
+@mixin text-regular {
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+@mixin counter {
+  font-weight: 200;
+  font-size: 4.5em;
+  line-height: 55px;
+  letter-spacing: -0.01em;
+}
+
+@mixin text-category {
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 1;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
+@mixin title-blog-card {
+  font-weight: 400;
+  font-size: 1.313em;
+  line-height: 34px;
+}
+
+@mixin text-search {
+  font-weight: 600;
+  font-size: 0.75em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@mixin title-single-post {
+  font-weight: 200;
+  font-size: 2em;
+  line-height: 59px;
+}
+
+@mixin category-product {
+  font-weight: 400;
+  font-size: 0.75em;
+  line-height: 1;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+@mixin title-form {
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+@mixin link-summary {
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1;
+}
