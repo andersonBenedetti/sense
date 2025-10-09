@@ -69,6 +69,10 @@
   .section-categories {
     padding-top: 100px;
 
+    @media (max-width: 1024px) {
+      padding-top: 50px;
+    }
+
     .categories-top {
       display: flex;
       justify-content: space-between;
@@ -152,6 +156,76 @@
 
         @media (max-width: 768px) {
           display: flex;
+        }
+      }
+    }
+  }
+
+  .section-find {
+    padding: 100px;
+    background-color: $black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      padding: 50px 20px;
+    }
+
+    p,
+    .title-section {
+      color: $white;
+      max-width: 450px;
+    }
+
+    .title-section {
+      margin-top: 20px;
+    }
+  }
+
+  .section-blog {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media (max-width: 768px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .blog-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+
+      .title-section {
+        max-width: 700px;
+        margin-top: 20px;
+
+        @media (max-width: 1024px) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .section-social {
+    .blog-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+
+      .title-section {
+        max-width: 700px;
+        margin-top: 20px;
+
+        @media (max-width: 1024px) {
+          margin-bottom: 20px;
         }
       }
     }

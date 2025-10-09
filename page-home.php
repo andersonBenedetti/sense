@@ -43,16 +43,16 @@ function gabriella_show_products($args = [])
                         $alt_text = $title;
                     }
                     ?>
-            <a class="swiper-slide" href="<?php echo esc_url($link); ?>" aria-label="<?php echo esc_attr($title); ?>">
-                <img class="dkp" src="<?php echo esc_url($img_desktop); ?>" alt="<?php echo esc_attr($alt_text); ?>"
-                    loading="lazy" width="1200" height="auto">
-                <img class="mbl" src="<?php echo esc_url($img_mobile); ?>" alt="<?php echo esc_attr($alt_text); ?>"
-                    loading="lazy" width="600" height="auto">
-            </a>
-            <?php endwhile;
+                    <a class="swiper-slide" href="<?php echo esc_url($link); ?>" aria-label="<?php echo esc_attr($title); ?>">
+                        <img class="dkp" src="<?php echo esc_url($img_desktop); ?>" alt="<?php echo esc_attr($alt_text); ?>"
+                            loading="lazy" width="1200" height="auto">
+                        <img class="mbl" src="<?php echo esc_url($img_mobile); ?>" alt="<?php echo esc_attr($alt_text); ?>"
+                            loading="lazy" width="600" height="auto">
+                    </a>
+                <?php endwhile;
                 wp_reset_postdata();
             else: ?>
-            <p><?php _e('Desculpe, nenhum slide encontrado.', 'textdomain'); ?></p>
+                <p><?php _e('Desculpe, nenhum slide encontrado.', 'textdomain'); ?></p>
             <?php endif; ?>
         </div>
         <div class="swiper-buttons">
@@ -92,12 +92,12 @@ function gabriella_show_products($args = [])
                             $image_url = wp_get_attachment_url($thumbnail_id);
                             $image_url = $image_url ? $image_url : get_stylesheet_directory_uri() . '/img/default-category.webp';
                             ?>
-                    <a class="swiper-slide" href="<?php echo get_term_link($category); ?>"
-                        aria-label="<?php echo esc_attr($category->name); ?>">
-                        <img class="img-slide" src="<?php echo esc_url($image_url); ?>"
-                            alt="<?php echo esc_attr($category->name); ?>" loading="lazy" width="400" height="400">
-                    </a>
-                    <?php
+                            <a class="swiper-slide" href="<?php echo get_term_link($category); ?>"
+                                aria-label="<?php echo esc_attr($category->name); ?>">
+                                <img class="img-slide" src="<?php echo esc_url($image_url); ?>"
+                                    alt="<?php echo esc_attr($category->name); ?>" loading="lazy" width="400" height="400">
+                            </a>
+                            <?php
                         endforeach;
                     endif;
                     ?>
@@ -187,27 +187,30 @@ function gabriella_show_products($args = [])
         </div>
     </section>
 
-    <section class="section-find">
-        <div class="container">
-            <h2 class="title-section">onde encontrar</h2>
-            <h3>Saiba onde encontrar nossas peças.</h3>
-            <a class="btn secondary" href="#">
-                <span>Encontre</span>
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/arrow-btn-secondary.svg"
-                    alt="icone arrow">
-            </a>
+    <section class="section-find container">
+        <div>
+            <p class="subtitle">onde encontrar</p>
+            <h2 class="title-section">Encontre peças Sense mais perto de você !</h2>
         </div>
+
+        <a class="btn secondary" href="#">
+            <span>conheça todas</span>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/arrow-btn.svg" alt="icone arrow" width="9"
+                height="9">
+        </a>
     </section>
 
     <section class="section-blog container">
         <div class="blog-top">
             <div>
-                <h2 class="title-section">Blog</h2>
-                <h3>Tendências, lançamentos e novidades do setor</h3>
+                <p class="subtitle">Blog</p>
+                <h2 class="title-section">Novidades, inspirações e tudo o que move o universo da cerâmica</h2>
             </div>
+
             <a class="btn" href="#">
-                <span>leia todas</span>
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/arrow-btn.svg" alt="icone arrow">
+                <span>Ler todas</span>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/arrow-btn.svg" alt="icone arrow" width="9"
+                    height="9">
             </a>
         </div>
 
@@ -222,39 +225,38 @@ function gabriella_show_products($args = [])
             echo '<div class="blog-cards">';
             while ($loop->have_posts()):
                 $loop->the_post(); ?>
-        <a href="<?php the_permalink(); ?>" class="blog-card">
-            <?php if (has_post_thumbnail()): ?>
-            <div class="blog-card-img">
-                <?php the_post_thumbnail('medium'); ?>
-            </div>
-            <?php endif; ?>
+                <a href="<?php the_permalink(); ?>" class="blog-card">
+                    <?php if (has_post_thumbnail()): ?>
+                        <div class="blog-card-img">
+                            <?php the_post_thumbnail('medium'); ?>
+                        </div>
+                    <?php endif; ?>
 
-            <div class="blog-card-infos">
-                <div class="blog-card-top">
-                    <?php
+                    <div class="blog-card-infos">
+                        <div class="blog-card-top">
+                            <?php
                             $categories = get_the_category();
                             if ($categories): ?>
-                    <span class="blog-card-category"><?php echo esc_html($categories[0]->name); ?></span>
-                    <?php endif; ?>
+                                <span class="blog-card-category"><?php echo esc_html($categories[0]->name); ?></span>
+                            <?php endif; ?>
 
-                    <?php if (get_field('data_do_post')): ?>
-                    <span class="blog-card-date"><?php the_field('data_do_post'); ?></span>
-                    <?php endif; ?>
-                </div>
+                            <?php if (get_field('data_do_post')): ?>
+                                <span class="blog-card-date"><?php the_field('data_do_post'); ?></span>
+                            <?php endif; ?>
+                        </div>
 
-                <h3 class="blog-card-title"><?php the_title(); ?></h3>
+                        <h3 class="blog-card-title"><?php the_title(); ?></h3>
 
-                <?php if (get_field('descricao_do_post')): ?>
-                <p class="blog-card-description"><?php the_field('descricao_do_post'); ?></p>
-                <?php endif; ?>
+                        <?php if (get_field('descricao_do_post')): ?>
+                            <p class="blog-card-description"><?php the_field('descricao_do_post'); ?></p>
+                        <?php endif; ?>
 
-                <p class="blog-card-btn">
-                    <span>Leia mais</span>
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/arrow-blog.svg" alt="icone arrow">
-                </p>
-            </div>
-        </a>
-        <?php endwhile;
+                        <p class="blog-card-btn">
+                            <span>Leia mais</span>
+                        </p>
+                    </div>
+                </a>
+            <?php endwhile;
             echo '</div>';
             wp_reset_postdata();
         endif;
@@ -262,12 +264,18 @@ function gabriella_show_products($args = [])
     </section>
 
     <section class="section-social container">
-        <h2 class="title-section">instagram</h2>
-        <h3>@gabriellarevestimentos_oficial</h3>
-        <a class="btn" href="#">
-            <span>siga-nos</span>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/arrow-btn.svg" alt="icone arrow">
-        </a>
+        <div class="blog-top">
+            <div>
+                <p class="subtitle">instagram</p>
+                <h2 class="title-section">@sensedecordesign</h2>
+            </div>
+
+            <a class="btn" href="#">
+                <span>Seguir</span>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/arrow-btn.svg" alt="icone arrow" width="9"
+                    height="9">
+            </a>
+        </div>
     </section>
 </main>
 
