@@ -62,3 +62,25 @@ ul {
 .single_variation_wrap {
   display: none !important;
 }
+
+.subtitle {
+  @include subtitle;
+  color: $subtitle_color;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 113px;
+    height: 1px;
+    background-color: $subtitle_color;
+  }
+}
+
+.title-section {
+  @include title-section;
+  color: $black;
+}

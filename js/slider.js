@@ -16,27 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const catCarousel = new Swiper(".cat-carousel", {
     loop: true,
-    slidesPerView: 1,
-    spaceBetween: 20,
+    slidesPerView: 1.25,
+    spaceBetween: 10,
     speed: 800,
     autoplay: {
       delay: 6000,
       disableOnInteraction: false,
     },
-    navigation: {
-      nextEl: ".cat-carousel-wrapper .swiper-button-next",
-      prevEl: ".cat-carousel-wrapper .swiper-button-prev",
-    },
-    pagination: {
-      el: ".cat-carousel-wrapper .swiper-pagination",
-      clickable: true,
-    },
     breakpoints: {
       768: {
-        slidesPerView: 1,
+        slidesPerView: 1.5,
       },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 2.5,
       },
     },
   });

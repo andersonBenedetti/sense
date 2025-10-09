@@ -43,16 +43,16 @@ function gabriella_show_products($args = [])
                         $alt_text = $title;
                     }
                     ?>
-                    <a class="swiper-slide" href="<?php echo esc_url($link); ?>" aria-label="<?php echo esc_attr($title); ?>">
-                        <img class="dkp" src="<?php echo esc_url($img_desktop); ?>" alt="<?php echo esc_attr($alt_text); ?>"
-                            loading="lazy" width="1200" height="auto">
-                        <img class="mbl" src="<?php echo esc_url($img_mobile); ?>" alt="<?php echo esc_attr($alt_text); ?>"
-                            loading="lazy" width="600" height="auto">
-                    </a>
-                <?php endwhile;
+            <a class="swiper-slide" href="<?php echo esc_url($link); ?>" aria-label="<?php echo esc_attr($title); ?>">
+                <img class="dkp" src="<?php echo esc_url($img_desktop); ?>" alt="<?php echo esc_attr($alt_text); ?>"
+                    loading="lazy" width="1200" height="auto">
+                <img class="mbl" src="<?php echo esc_url($img_mobile); ?>" alt="<?php echo esc_attr($alt_text); ?>"
+                    loading="lazy" width="600" height="auto">
+            </a>
+            <?php endwhile;
                 wp_reset_postdata();
             else: ?>
-                <p><?php _e('Desculpe, nenhum slide encontrado.', 'textdomain'); ?></p>
+            <p><?php _e('Desculpe, nenhum slide encontrado.', 'textdomain'); ?></p>
             <?php endif; ?>
         </div>
         <div class="swiper-buttons">
@@ -62,8 +62,20 @@ function gabriella_show_products($args = [])
     </section>
 
     <section class="section-categories">
-        <h2 class="title-section">Ambientes</h2>
-        <h3>Encontre o revestimento ideal para o seu espaço</h3>
+        <div class="container">
+            <div class="categories-top">
+                <div>
+                    <p class="subtitle">Coleções</p>
+                    <h2 class="title-section">Transforme espaços com experiências únicas.</h2>
+                </div>
+
+                <a class="btn" href="#">
+                    <span>conheça todas</span>
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/arrow-btn.svg" alt="icone arrow"
+                        width="9" height="9">
+                </a>
+            </div>
+        </div>
 
         <div class="cat-carousel-wrapper">
             <div class="cat-carousel swiper">
@@ -80,98 +92,98 @@ function gabriella_show_products($args = [])
                             $image_url = wp_get_attachment_url($thumbnail_id);
                             $image_url = $image_url ? $image_url : get_stylesheet_directory_uri() . '/img/default-category.webp';
                             ?>
-                            <a class="swiper-slide" href="<?php echo get_term_link($category); ?>"
-                                aria-label="<?php echo esc_attr($category->name); ?>">
-                                <img class="img-slide" src="<?php echo esc_url($image_url); ?>"
-                                    alt="<?php echo esc_attr($category->name); ?>" loading="lazy" width="400" height="400">
-                                <div class="btn-bottom">
-                                    <?php echo esc_html($category->name); ?>
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/ph_arrow-up-right-thin.svg"
-                                        alt="icone arrow">
-                                </div>
-                            </a>
-                            <?php
+                    <a class="swiper-slide" href="<?php echo get_term_link($category); ?>"
+                        aria-label="<?php echo esc_attr($category->name); ?>">
+                        <img class="img-slide" src="<?php echo esc_url($image_url); ?>"
+                            alt="<?php echo esc_attr($category->name); ?>" loading="lazy" width="400" height="400">
+                    </a>
+                    <?php
                         endforeach;
                     endif;
                     ?>
                 </div>
             </div>
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-pagination secondary" aria-hidden="true"></div>
-        </div>
-
-        <a class="btn" href="#">
-            <span>Veja a coleção completa</span>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/arrow-btn.svg" alt="icone arrow">
-        </a>
-    </section>
-
-    <section class="section-about container">
-        <div class="content-top">
-            <div>
-                <p class="subtitle">Sobre nós</p>
-                <h2>Revestimentos artísticos em pequenos formatos, feitos para transformar espaços em obras de arte</h2>
-            </div>
-
-            <img class="img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/sobre-nos-home.webp"
-                alt="Sobre nós">
-        </div>
-
-        <div class="content-bottom">
-            <div class="gallery">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-1.webp" alt="Sobre nós">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-2.webp" alt="Sobre nós">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-3.webp" alt="Sobre nós">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-4.webp" alt="Sobre nós">
-            </div>
-
-            <p>Somos uma fábrica de revestimentos cerâmicos, especializada em pequenos formatos e produtos decorativos,
-                situada na tradicional cidade de Criciúma, Santa Catarina. Ao longo das duas últimas décadas, dedicamos
-                nossa expertise ao refinamento estético, à inovação e à qualidade, resultando em criações que
-                transcendem a função para se tornarem verdadeiras obras de arte.</p>
         </div>
     </section>
 
-    <section class="section-story container">
-        <div class="story-content">
-            <div class="story-counter">
-                <p>+ DE</p>
-                <p class="counter" data-target="25">0</p>
-                <p class="text">Anos de tradição no mercado cerâmico de pequenos formatos</p>
+    <section class="section-about">
+        <div class="container">
+            <div class="about-top">
+                <div class="about-left">
+                    <p class="subtitle">Sobre nós</p>
+                    <h2 class="title-section">Muito além do revestimento</h2>
+                    <a class="btn secondary" href="#">
+                        <span>conheça</span>
+                    </a>
+                </div>
+
+                <div class="about-right">
+                    <p>A Sense surge com espírito inovador e atual, desenvolvendo produtos que vão além das expectativas
+                        e necessidades de nossos clientes.</p>
+                    <p>Com um olhar para o futuro, a Sense busca incessante e incansavelmente desenvolver através de
+                        pesquisas em Tecnologia e Design, seus produtos com altíssimo nível, aliando modernidade e
+                        exclusividade.</p>
+                </div>
             </div>
 
-            <div class="story-counter">
-                <p>+ DE</p>
-                <p class="counter" data-target="20">0</p>
-                <p class="text">Coleções ativas no catálogo</p>
+            <div class="about-img">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sobre-nos.webp" alt="Sobre nós" width="1200"
+                    height="421">
             </div>
 
-            <div class="story-counter">
-                <p>+ DE</p>
-                <p class="counter" data-target="4000">0</p>
-                <p class="text">Revendedores parceiros</p>
+            <div class="about-counter">
+                <div class="story-counter">
+                    <p>+ DE</p>
+                    <p class="counter" data-target="5">0</p>
+                    <p class="text">Anos de atuação</p>
+                </div>
+
+                <div class="story-counter">
+                    <p>+ DE</p>
+                    <p class="counter" data-target="13">0</p>
+                    <p class="text">Coleções ativas</p>
+                </div>
+
+                <div class="story-counter">
+                    <p>+ DE</p>
+                    <p class="counter" data-target="500">0</p>
+                    <p class="text">clientes</p>
+                </div>
+
+                <div class="story-counter">
+                    <p>+ DE</p>
+                    <p class="counter" data-target="106">0</p>
+                    <p class="text">modelos</p>
+                </div>
             </div>
         </div>
-
-        <a class="btn secondary" href="#">
-            <span>Conheça nossa história</span>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/arrow-btn-secondary.svg" alt="icone arrow">
-        </a>
     </section>
 
     <section class="section-gallery container">
-        <h2 class="title-section">Ambientes</h2>
-        <h3>Encontre o revestimento ideal para o seu espaço</h3>
+        <div>
+            <p class="subtitle">inspire-se</p>
+            <h2 class="title-section">Explore combinações e criações</h2>
+            <div class="gallery-content">
+                <div class="img">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/inspire-se-1.webp" alt="foto"
+                        width="588" height="429">
+                </div>
+                <div class="img">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/inspire-se-2.webp" alt="foto"
+                        width="588" height="429">
+                </div>
+            </div>
+        </div>
 
         <div class="gallery-content">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-7.webp" alt="foto">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-5.webp" alt="foto">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-9.webp" alt="foto">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-10.webp" alt="foto">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-8.webp" alt="foto">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-6.webp" alt="foto">
+            <div class="img">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/inspire-se-3.webp" alt="foto" width="588"
+                    height="429">
+            </div>
+            <div class="img">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/inspire-se-4.webp" alt="foto" width="588"
+                    height="429">
+            </div>
         </div>
     </section>
 
@@ -210,39 +222,39 @@ function gabriella_show_products($args = [])
             echo '<div class="blog-cards">';
             while ($loop->have_posts()):
                 $loop->the_post(); ?>
-                <a href="<?php the_permalink(); ?>" class="blog-card">
-                    <?php if (has_post_thumbnail()): ?>
-                        <div class="blog-card-img">
-                            <?php the_post_thumbnail('medium'); ?>
-                        </div>
-                    <?php endif; ?>
+        <a href="<?php the_permalink(); ?>" class="blog-card">
+            <?php if (has_post_thumbnail()): ?>
+            <div class="blog-card-img">
+                <?php the_post_thumbnail('medium'); ?>
+            </div>
+            <?php endif; ?>
 
-                    <div class="blog-card-infos">
-                        <div class="blog-card-top">
-                            <?php
+            <div class="blog-card-infos">
+                <div class="blog-card-top">
+                    <?php
                             $categories = get_the_category();
                             if ($categories): ?>
-                                <span class="blog-card-category"><?php echo esc_html($categories[0]->name); ?></span>
-                            <?php endif; ?>
+                    <span class="blog-card-category"><?php echo esc_html($categories[0]->name); ?></span>
+                    <?php endif; ?>
 
-                            <?php if (get_field('data_do_post')): ?>
-                                <span class="blog-card-date"><?php the_field('data_do_post'); ?></span>
-                            <?php endif; ?>
-                        </div>
+                    <?php if (get_field('data_do_post')): ?>
+                    <span class="blog-card-date"><?php the_field('data_do_post'); ?></span>
+                    <?php endif; ?>
+                </div>
 
-                        <h3 class="blog-card-title"><?php the_title(); ?></h3>
+                <h3 class="blog-card-title"><?php the_title(); ?></h3>
 
-                        <?php if (get_field('descricao_do_post')): ?>
-                            <p class="blog-card-description"><?php the_field('descricao_do_post'); ?></p>
-                        <?php endif; ?>
+                <?php if (get_field('descricao_do_post')): ?>
+                <p class="blog-card-description"><?php the_field('descricao_do_post'); ?></p>
+                <?php endif; ?>
 
-                        <p class="blog-card-btn">
-                            <span>Leia mais</span>
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/arrow-blog.svg" alt="icone arrow">
-                        </p>
-                    </div>
-                </a>
-            <?php endwhile;
+                <p class="blog-card-btn">
+                    <span>Leia mais</span>
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/arrow-blog.svg" alt="icone arrow">
+                </p>
+            </div>
+        </a>
+        <?php endwhile;
             echo '</div>';
             wp_reset_postdata();
         endif;

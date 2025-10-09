@@ -1,4 +1,5 @@
 $font-primary: "Kumbh Sans", sans-serif;
+$font-secondary: "Bodoni Moda", serif;
 
 @mixin text {
   font-size: 1em;
@@ -15,7 +16,7 @@ $font-primary: "Kumbh Sans", sans-serif;
 @mixin text-small-medium {
   font-size: 0.875em;
   font-weight: 500;
-  line-height: 1;
+  line-height: 26px;
 }
 
 @mixin text-medium {
@@ -37,11 +38,16 @@ $font-primary: "Kumbh Sans", sans-serif;
 }
 
 @mixin title-section {
+  font-family: $font-secondary;
   font-weight: 400;
-  font-size: 1.125em;
-  line-height: 1;
-  letter-spacing: 7px;
-  text-transform: uppercase;
+  font-style: italic;
+  font-size: 3em;
+  line-height: 44.5px;
+
+  @media (max-width: 767px) {
+    font-size: 2em;
+    line-height: 1;
+  }
 }
 
 @mixin title-card-cat {
@@ -94,8 +100,8 @@ $font-primary: "Kumbh Sans", sans-serif;
 }
 
 @mixin subtitle {
-  font-weight: 400;
-  font-size: 1.125em;
+  font-weight: 500;
+  font-size: 1em;
   line-height: 1;
   letter-spacing: 7px;
   text-transform: uppercase;
@@ -157,9 +163,10 @@ $font-primary: "Kumbh Sans", sans-serif;
 }
 
 @mixin counter {
-  font-weight: 200;
+  font-family: $font-secondary;
+  font-weight: 400;
   font-size: 4.5em;
-  line-height: 55px;
+  line-height: 1;
   letter-spacing: -0.01em;
 }
 
