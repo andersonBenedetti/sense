@@ -58,7 +58,7 @@ ul {
 }
 
 .subtitle {
-  width: max-content;
+  max-width: max-content;
   font-weight: 500;
   font-size: 1em;
   line-height: 1;
@@ -1209,6 +1209,7 @@ ul {
   gap: 20px;
   padding-top: 100px;
   padding-bottom: 100px;
+  position: relative;
 }
 @media (max-width: 768px) {
   .section-gallery {
@@ -1239,6 +1240,12 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.section-gallery .btn {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
 }
 
 #pg-home .main-carousel {
@@ -2315,6 +2322,110 @@ ul {
 }
 #pg-story .section-content .content-bottom .img {
   max-width: 474px;
+}
+
+#pg-about .section-about {
+  padding-top: 200px;
+  padding-bottom: 150px;
+}
+@media (max-width: 768px) {
+  #pg-about .section-about {
+    padding-bottom: 50px;
+  }
+}
+#pg-about .section-about .about-top {
+  margin-bottom: 50px;
+}
+#pg-about .section-about .about-top .about-left {
+  max-width: 600px;
+}
+#pg-about .section-content {
+  padding-bottom: 100px;
+}
+@media (max-width: 768px) {
+  #pg-about .section-content {
+    padding-bottom: 50px;
+  }
+}
+#pg-about .section-content .content-img {
+  width: 100%;
+  margin: -50px auto 0 auto;
+}
+@media (max-width: 768px) {
+  #pg-about .section-content .content-img {
+    margin: 0;
+  }
+}
+#pg-about .section-content .content-img img {
+  width: 100%;
+  object-fit: cover;
+}
+#pg-about .section-content .content-text {
+  margin: 50px auto 0 auto;
+  max-width: 684px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#pg-about .section-content .content-text h2 {
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 1;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+#pg-about .section-content .content-text strong {
+  font-style: italic;
+}
+@media (max-width: 768px) {
+  #pg-about .section-gallery {
+    padding-bottom: 100px;
+  }
+}
+#pg-about .section-gallery .btn {
+  font-size: 0.75em;
+}
+#pg-about .section-contact {
+  margin: 100px auto;
+  background-image: url("./img/sobre-nos-contato.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  #pg-about .section-contact {
+    margin: 50px auto;
+    padding: 100px 20px;
+    justify-content: center;
+  }
+}
+#pg-about .section-contact .contact-content {
+  background-color: #000000;
+  max-width: 474px;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#pg-about .section-contact .contact-content address {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-style: normal;
+}
+#pg-about .section-contact .contact-content address a {
+  display: block;
+  font-size: 0.875em;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.7490196078);
+  text-transform: uppercase;
+  transition: color 0.4s ease;
+}
+#pg-about .section-contact .contact-content address a:hover {
+  color: #ffffff;
 }
 
 #archive-product .section-intro {

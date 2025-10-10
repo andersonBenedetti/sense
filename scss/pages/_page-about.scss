@@ -1,0 +1,110 @@
+#pg-about {
+  .section-about {
+    padding-top: 200px;
+    padding-bottom: 150px;
+
+    @media (max-width: 768px) {
+      padding-bottom: 50px;
+    }
+
+    .about-top {
+      margin-bottom: 50px;
+
+      .about-left {
+        max-width: 600px;
+      }
+    }
+  }
+
+  .section-content {
+    padding-bottom: 100px;
+
+    @media (max-width: 768px) {
+      padding-bottom: 50px;
+    }
+
+    .content-img {
+      width: 100%;
+      margin: -50px auto 0 auto;
+
+      @media (max-width: 768px) {
+        margin: 0;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content-text {
+      margin: 50px auto 0 auto;
+      max-width: 684px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      h2 {
+        @include text-category;
+      }
+
+      strong {
+        font-style: italic;
+      }
+    }
+  }
+
+  .section-gallery {
+    @media (max-width: 768px) {
+      padding-bottom: 100px;
+    }
+
+    .btn {
+      font-size: 0.75em;
+    }
+  }
+
+  .section-contact {
+    margin: 100px auto;
+    background-image: url("./img/sobre-nos-contato.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: 768px) {
+      margin: 50px auto;
+      padding: 100px 20px;
+      justify-content: center;
+    }
+
+    .contact-content {
+      background-color: $black;
+      max-width: 474px;
+      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      address {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-style: normal;
+
+        a {
+          display: block;
+          @include text-small;
+          color: $white_opacity_color;
+          text-transform: uppercase;
+          transition: color 0.4s ease;
+
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

@@ -47,7 +47,7 @@ ul {
 }
 
 .subtitle {
-  width: max-content;
+  max-width: max-content;
   @include subtitle;
   color: $subtitle_color;
   position: relative;
