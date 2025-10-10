@@ -6,7 +6,10 @@
 
 <main id="pg-blog" role="main">
     <section class="section-intro">
-        <h1>Tendências, lançamentos e novidades do setor</h1>
+        <div class="container">
+            <p class="subtitle">Blog</p>
+            <h1 class="title-section">Novidades, inspirações e tudo o que move o universo da cerâmica</h1>
+        </div>
     </section>
 
     <section class="blog-search container">
@@ -24,7 +27,7 @@
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args = [
             'post_type' => 'post',
-            'posts_per_page' => 5,
+            'posts_per_page' => 6,
             'paged' => $paged,
         ];
         $loop = new WP_Query($args);

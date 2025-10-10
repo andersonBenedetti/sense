@@ -3349,6 +3349,16 @@ label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
     padding: 0;
   }
 }
+#pg-blog .section-intro {
+  background-color: #000000;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+#pg-blog .section-intro .title-section {
+  color: #ffffff;
+  margin-top: 20px;
+  max-width: 700px;
+}
 #pg-blog .blog-search {
   margin: 20px auto;
   display: flex;
@@ -3360,7 +3370,7 @@ label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
   display: flex;
   align-items: center;
   gap: 0;
-  border: 1px solid #b5c1c8;
+  border: 1px solid #000000;
   border-radius: 0;
   background: transparent;
   overflow: hidden;
@@ -3375,11 +3385,11 @@ label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
   line-height: 1;
   text-transform: uppercase;
   outline: none;
-  color: #b5c1c8;
+  color: #000000;
 }
 #pg-blog .blog-search form input[type=search]::placeholder {
   opacity: 1;
-  color: #b5c1c8;
+  color: #000000;
 }
 #pg-blog .blog-search form button {
   display: inline-flex;
@@ -3411,7 +3421,7 @@ label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
   font-weight: 500;
   font-size: 1.125em;
   line-height: 26px;
-  color: #14506a;
+  color: #000000;
 }
 #pg-blog .section-blog .blog-pagination .prev a,
 #pg-blog .section-blog .blog-pagination .next a {
