@@ -61,7 +61,6 @@ function gabriella_product_list($products)
 
                 <p class="btn-product">
                     <span>Mais detalhes</span>
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/icons/arrow-product.svg" alt="icone arrow">
                 </p>
             </a>
         </li>
@@ -164,10 +163,11 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
 // DESCRIPTION ATRIBUTO
 add_action('wp_ajax_get_attribute_description', 'get_attribute_description_callback');
 add_action('wp_ajax_nopriv_get_attribute_description', 'get_attribute_description_callback');
-function get_attribute_description_callback() {
+function get_attribute_description_callback()
+{
     $taxonomy = sanitize_text_field($_POST['taxonomy']);
     $taxonomy = str_replace('attribute_', '', $taxonomy); // CORREÇÃO
-    $term     = sanitize_text_field($_POST['term']);
+    $term = sanitize_text_field($_POST['term']);
 
     if ($taxonomy && $term) {
         $term_obj = get_term_by('slug', $term, $taxonomy);
@@ -182,7 +182,8 @@ function get_attribute_description_callback() {
 add_action('wp_footer', 'custom_attribute_description_script');
 function custom_attribute_description_script()
 {
-    if (!is_product()) return;
+    if (!is_product())
+        return;
     ?>
     <script>
         jQuery(document).ready(function ($) {
@@ -202,8 +203,8 @@ function custom_attribute_description_script()
 
             // Quando mudar o atributo
             $('form.variations_form').on('change', '.variations select', function () {
-                let taxonomy = $(this).attr('name'); 
-                let termSlug = $(this).val(); 
+                let taxonomy = $(this).attr('name');
+                let termSlug = $(this).val();
                 let descBox = $(this).closest('tr').find('td.value .attribute-description');
 
                 if (termSlug) {

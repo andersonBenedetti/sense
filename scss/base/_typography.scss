@@ -198,7 +198,7 @@ $font-secondary: "Bodoni Moda", serif;
 }
 
 @mixin category-product {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 0.75em;
   line-height: 1;
   letter-spacing: 5px;
@@ -216,5 +216,11 @@ $font-secondary: "Bodoni Moda", serif;
 @mixin link-summary {
   font-weight: 700;
   font-size: 1em;
+  line-height: 1;
+}
+
+@mixin title-single-product {
+  font-weight: 400;
+  font-size: 1.5;
   line-height: 1;
 }

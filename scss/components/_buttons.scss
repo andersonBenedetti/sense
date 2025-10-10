@@ -32,4 +32,28 @@
   &.secondary {
     border-color: $white;
   }
+
+  &.product {
+    gap: 20px;
+    border-color: $white;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.laudo {
+    background-color: $white;
+    border-color: $black;
+
+    img {
+      width: 12px;
+      height: 12px;
+    }
+
+    span {
+      color: $black;
+    }
+  }
 }

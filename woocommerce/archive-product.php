@@ -3,8 +3,10 @@
 <main id="archive-product">
 
   <section class="section-intro">
-    <h2 class="title-section">Produtos</h2>
-    <h1>Linha completa de revestimentos cerâmicos de pequenos formatos</h1>
+    <div class="container">
+      <p class="subtitle">Produtos</p>
+      <h1 class="title-section">Revestimentos exclusivos que unem estética e funcionalidade</h1>
+    </div>
   </section>
 
   <section class="section-filters">
@@ -49,8 +51,8 @@
             continue;
           }
 
-          // pular produtos da categoria refratorios
-          if ($product && has_term('refratorios', 'product_cat', $product->get_id())) {
+          // pular produtos da categoria expositores
+          if ($product && has_term('expositores', 'product_cat', $product->get_id())) {
             continue;
           }
 

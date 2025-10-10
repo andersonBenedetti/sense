@@ -1,34 +1,13 @@
 #archive-product {
   .section-intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
+    background-color: $black;
+    padding-top: 200px;
+    padding-bottom: 100px;
 
     .title-section {
-      @include title-section;
-      color: $primaryColor;
-    }
-
-    h1 {
-      @include text-top;
-      color: $black;
-      max-width: 644px;
-    }
-
-    &.ref {
-      background-image: url("./img/refratorios.webp");
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding: 200px;
-
-      h1 {
-        @include title-extra-light;
-        color: $white;
-        margin: 0;
-        text-align: left;
-      }
+      color: $white;
+      margin-top: 20px;
+      max-width: 650px;
     }
   }
 
@@ -45,7 +24,7 @@
         display: inline-block;
         width: 292px;
         height: 44px;
-        border: 1px solid $border-btn;
+        border: 1px solid $border-infos;
         border-radius: 0;
         background-color: $white;
         overflow: hidden;
@@ -87,10 +66,10 @@
           content: "";
           background: url("./icons/arrow-category.svg") no-repeat center /
             contain;
-          width: 36px;
-          height: 36px;
+          width: 10px;
+          height: 10px;
           position: absolute;
-          right: 3px;
+          right: 10px;
           top: 50%;
           transform: translateY(-50%);
           pointer-events: none;
@@ -110,7 +89,7 @@
 
       .current-page {
         @include text-medium;
-        color: $primaryColor;
+        color: $black;
       }
 
       .prev a,
