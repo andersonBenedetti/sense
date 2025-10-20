@@ -1,0 +1,239 @@
+#pg-contact {
+  .section-content {
+    background-color: $black;
+    padding-top: 200px;
+    padding-bottom: 150px;
+
+    @media (max-width: 1024px) {
+      padding-top: 150px;
+      padding-bottom: 50px;
+    }
+
+    > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      form {
+        width: 100%;
+
+        br {
+          display: none;
+        }
+
+        p,
+        span,
+        input,
+        select,
+        textarea {
+          width: 100%;
+          max-width: 100%;
+        }
+
+        textarea {
+          height: 93px;
+          resize: none;
+        }
+
+        input,
+        select,
+        textarea {
+          background: none;
+          border: 1px solid $border-search;
+          font-family: $font-primary;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 1;
+          color: $white;
+          padding: 12px 15px;
+          margin-bottom: 15px;
+
+          &::placeholder {
+            color: $white;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .file-label {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -0.3px;
+          color: $white;
+
+          .help-icon {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            border: 2px solid $secondaryColor;
+            border-radius: 50%;
+            background: none;
+            color: $white;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: help;
+          }
+        }
+
+        .wpcf7-file {
+          border: 0;
+          padding: 10px 0;
+        }
+
+        .wpcf7-list-item {
+          margin: 0;
+          margin-bottom: 10px;
+
+          label {
+            display: flex;
+            gap: 5px;
+
+            input {
+              width: 14px;
+              height: 14px;
+              margin-top: 5px;
+            }
+
+            span {
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 26px;
+              color: $white;
+
+              a {
+                text-decoration: underline;
+                color: $white;
+                transition: opacity 0.3s ease;
+
+                &:hover {
+                  opacity: 0.8;
+                }
+              }
+            }
+          }
+        }
+
+        .btn {
+          border-color: $white;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 1;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          color: $white;
+          width: max-content;
+          padding: 0 20px;
+        }
+
+        .wpcf7-spinner {
+          display: none !important;
+        }
+
+        .wpcf7-response-output {
+          margin: 10px 0;
+        }
+
+        .wpcf7-response-output {
+          color: $white;
+          text-align: center;
+        }
+
+        input[type="checkbox"] {
+          accent-color: $secondaryColor;
+        }
+
+        .wpcf7 form.invalid .wpcf7-response-output,
+        .wpcf7 form.unaccepted .wpcf7-response-output,
+        .wpcf7 form.payment-required .wpcf7-response-output {
+          background-color: #ffb900;
+        }
+
+        .wpcf7 form.sent .wpcf7-response-output {
+          background-color: #46b450;
+        }
+      }
+    }
+
+    .title-section {
+      color: $white;
+      margin: 20px 0;
+    }
+  }
+
+  .section-gallery {
+    @media (max-width: 768px) {
+      padding-bottom: 100px;
+    }
+
+    .btn {
+      font-size: 0.75em;
+    }
+  }
+
+  .section-infos {
+    margin: 100px auto;
+
+    @media (max-width: 1024px) {
+      margin: 50px auto;
+    }
+
+    .infos-container {
+      background-image: url("./img/entre-em-contato-infos.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 150px 50px;
+
+      @media (max-width: 1024px) {
+        padding: 50px 20px;
+      }
+
+      address {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        font-style: normal;
+
+        @media (max-width: 1024px) {
+          grid-template-columns: 1fr;
+        }
+
+        .infos-item {
+          background-color: $black;
+          padding: 30px 20px;
+
+          .subtitle {
+            margin-bottom: 20px;
+          }
+
+          a {
+            display: block;
+            @include text-small;
+            color: $white_opacity_color;
+            text-transform: uppercase;
+            transition: color 0.4s ease;
+
+            &:hover {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,47 +4,41 @@
 
 <?php get_header(); ?>
 
-<main id="pg-policy">
-  <section class="section-intro contact">
+<main id="pg-contact">
+  <section class="section-content">
     <div class="container">
-      <div class="intro-content">
-        <h1 class="title">Entre em contato</h1>
-
-        <div class="container-contact">
-          <div class="contact-item">
-            <span>Telefone</span>
-            <p>+55 (48) 3431-7000</p>
-            <p>0800 480 0888</p>
-          </div>
-
-          <div class="contact-item">
-            <span>E-mail</span>
-            <p>contato@gabcer.com.br</p>
-          </div>
-
-          <div class="contact-item">
-            <span>endereço</span>
-            <p>Rodovia Governador Jorge Lacerda 10300, Km 20, Bairro Verdinho, Criciúma/SC,</p>
-            <p>88814-552</p>
-          </div>
-        </div>
+      <div class="content-infos">
+        <p class="subtitle">contato</p>
+        <h2 class="title-section">A Sense é feita para quem compartilha a paixão por design e qualidade.</h2>
+      </div>
+      <div class="form-content">
+        <?php echo do_shortcode('[contact-form-7 id="67c5b12" title="Formulário de Entre em contato"]'); ?>
       </div>
     </div>
   </section>
 
-  <section class="section-content">
-    <div class="content-work">
-      <div class="contact-form">
-        <h2>venha fazer parte do nosso time!</h2>
-        <?php echo do_shortcode('[contact-form-7 id="67c5b12" title="Formulário de Entre em contato"]'); ?>
-      </div>
+  <section class="section-infos container">
+    <div class="infos-container">
+      <address>
+        <div class="infos-item">
+          <h3 class="subtitle">contato</h3>
+          <a href="tel:+554834317054">+55 (48) 3431-7054</a>
+          <a href="tel:+5548991464108">+55 (48) 9 9146-4108</a>
+        </div>
 
-      <div class="gallery">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-1.webp" alt="Sobre nós">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-2.webp" alt="Sobre nós">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-3.webp" alt="Sobre nós">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/gallery-4.webp" alt="Sobre nós">
-      </div>
+        <div class="infos-item">
+          <h3 class="subtitle">E-mail</h3>
+          <a href="mailto:vendassense@gabcer.com.br">vendassense@gabcer.com.br</a>
+        </div>
+
+        <div class="infos-item">
+          <h3 class="subtitle">Endereço</h3>
+          <a href="https://maps.google.com/?q=Rodovia+Governador+Jorge+Lacerda+10300,+Criciúma" target="_blank"
+            rel="noopener" aria-label="Ver endereço no Google Maps">
+            Rodovia Governador Jorge Lacerda 10300, Km 20, Bairro Verdinho, Criciúma/SC, </br>88814-552
+          </a>
+        </div>
+      </address>
     </div>
   </section>
 

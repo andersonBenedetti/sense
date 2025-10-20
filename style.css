@@ -2428,6 +2428,221 @@ ul {
   color: #ffffff;
 }
 
+#pg-contact .section-content {
+  background-color: #000000;
+  padding-top: 200px;
+  padding-bottom: 150px;
+}
+@media (max-width: 1024px) {
+  #pg-contact .section-content {
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+}
+#pg-contact .section-content > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+@media (max-width: 1024px) {
+  #pg-contact .section-content > div {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+#pg-contact .section-content > div form {
+  width: 100%;
+}
+#pg-contact .section-content > div form br {
+  display: none;
+}
+#pg-contact .section-content > div form p,
+#pg-contact .section-content > div form span,
+#pg-contact .section-content > div form input,
+#pg-contact .section-content > div form select,
+#pg-contact .section-content > div form textarea {
+  width: 100%;
+  max-width: 100%;
+}
+#pg-contact .section-content > div form textarea {
+  height: 93px;
+  resize: none;
+}
+#pg-contact .section-content > div form input,
+#pg-contact .section-content > div form select,
+#pg-contact .section-content > div form textarea {
+  background: none;
+  border: 1px solid #b5c1c8;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  color: #ffffff;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+}
+#pg-contact .section-content > div form input::placeholder,
+#pg-contact .section-content > div form select::placeholder,
+#pg-contact .section-content > div form textarea::placeholder {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+}
+#pg-contact .section-content > div form input:focus,
+#pg-contact .section-content > div form select:focus,
+#pg-contact .section-content > div form textarea:focus {
+  outline: none;
+}
+#pg-contact .section-content > div form .file-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+}
+#pg-contact .section-content > div form .file-label .help-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #22324c;
+  border-radius: 50%;
+  background: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: help;
+}
+#pg-contact .section-content > div form .wpcf7-file {
+  border: 0;
+  padding: 10px 0;
+}
+#pg-contact .section-content > div form .wpcf7-list-item {
+  margin: 0;
+  margin-bottom: 10px;
+}
+#pg-contact .section-content > div form .wpcf7-list-item label {
+  display: flex;
+  gap: 5px;
+}
+#pg-contact .section-content > div form .wpcf7-list-item label input {
+  width: 14px;
+  height: 14px;
+  margin-top: 5px;
+}
+#pg-contact .section-content > div form .wpcf7-list-item label span {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 26px;
+  color: #ffffff;
+}
+#pg-contact .section-content > div form .wpcf7-list-item label span a {
+  text-decoration: underline;
+  color: #ffffff;
+  transition: opacity 0.3s ease;
+}
+#pg-contact .section-content > div form .wpcf7-list-item label span a:hover {
+  opacity: 0.8;
+}
+#pg-contact .section-content > div form .btn {
+  border-color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: max-content;
+  padding: 0 20px;
+}
+#pg-contact .section-content > div form .wpcf7-spinner {
+  display: none !important;
+}
+#pg-contact .section-content > div form .wpcf7-response-output {
+  margin: 10px 0;
+}
+#pg-contact .section-content > div form .wpcf7-response-output {
+  color: #ffffff;
+  text-align: center;
+}
+#pg-contact .section-content > div form input[type=checkbox] {
+  accent-color: #22324c;
+}
+#pg-contact .section-content > div form .wpcf7 form.invalid .wpcf7-response-output,
+#pg-contact .section-content > div form .wpcf7 form.unaccepted .wpcf7-response-output,
+#pg-contact .section-content > div form .wpcf7 form.payment-required .wpcf7-response-output {
+  background-color: #ffb900;
+}
+#pg-contact .section-content > div form .wpcf7 form.sent .wpcf7-response-output {
+  background-color: #46b450;
+}
+#pg-contact .section-content .title-section {
+  color: #ffffff;
+  margin: 20px 0;
+}
+@media (max-width: 768px) {
+  #pg-contact .section-gallery {
+    padding-bottom: 100px;
+  }
+}
+#pg-contact .section-gallery .btn {
+  font-size: 0.75em;
+}
+#pg-contact .section-infos {
+  margin: 100px auto;
+}
+@media (max-width: 1024px) {
+  #pg-contact .section-infos {
+    margin: 50px auto;
+  }
+}
+#pg-contact .section-infos .infos-container {
+  background-image: url("./img/entre-em-contato-infos.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 150px 50px;
+}
+@media (max-width: 1024px) {
+  #pg-contact .section-infos .infos-container {
+    padding: 50px 20px;
+  }
+}
+#pg-contact .section-infos .infos-container address {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  font-style: normal;
+}
+@media (max-width: 1024px) {
+  #pg-contact .section-infos .infos-container address {
+    grid-template-columns: 1fr;
+  }
+}
+#pg-contact .section-infos .infos-container address .infos-item {
+  background-color: #000000;
+  padding: 30px 20px;
+}
+#pg-contact .section-infos .infos-container address .infos-item .subtitle {
+  margin-bottom: 20px;
+}
+#pg-contact .section-infos .infos-container address .infos-item a {
+  display: block;
+  font-size: 0.875em;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.7490196078);
+  text-transform: uppercase;
+  transition: color 0.4s ease;
+}
+#pg-contact .section-infos .infos-container address .infos-item a:hover {
+  color: #ffffff;
+}
+
 #archive-product .section-intro {
   background-color: #000000;
   padding-top: 200px;
