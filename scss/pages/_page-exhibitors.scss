@@ -1,0 +1,83 @@
+#pg-exhibitors {
+  .section-content {
+    background-color: $black;
+    padding-top: 200px;
+    padding-bottom: 100px;
+
+    @media (max-width: 1024px) {
+      padding-top: 150px;
+      padding-bottom: 50px;
+    }
+
+    .title-section {
+      max-width: 520px;
+      color: $white;
+      margin: 20px 0;
+    }
+  }
+
+  .section-gallery {
+    @media (max-width: 768px) {
+      padding-bottom: 100px;
+    }
+
+    .btn {
+      font-size: 0.75em;
+    }
+  }
+
+  .section-cards {
+    margin: 50px auto;
+
+    .infos-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &:last-child {
+        margin-top: 50px;
+
+        @media (max-width: 1024px) {
+          flex-direction: column-reverse;
+        }
+      }
+
+      .img {
+        max-width: 580px;
+
+        img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .content-item {
+        margin-top: 50px;
+
+        @media (max-width: 1024px) {
+          margin-top: 20px;
+        }
+
+        h3 {
+          @include text-top;
+          color: $black;
+          margin-bottom: 20px;
+        }
+
+        p {
+          line-height: 29px;
+        }
+
+        .btn {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

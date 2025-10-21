@@ -9,7 +9,7 @@
     <div class="container">
       <div class="content-infos">
         <p class="subtitle">contato</p>
-        <h2 class="title-section">A Sense é feita para quem compartilha a paixão por design e qualidade.</h2>
+        <h1 class="title-section">A Sense é feita para quem compartilha a paixnt por design e qualidade.</h1>
       </div>
       <div class="form-content">
         <?php echo do_shortcode('[contact-form-7 id="67c5b12" title="Formulário de Entre em contato"]'); ?>
