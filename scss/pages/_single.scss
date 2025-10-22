@@ -1,15 +1,21 @@
 #pg-single {
   .section-intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 50px 20px;
+    background: linear-gradient(
+      to bottom,
+      $black 0%,
+      $black 80%,
+      $white 80%,
+      $white 100%
+    );
+    padding-top: 150px;
+    position: relative;
+    z-index: 1;
 
     .blog-card-top {
       display: flex;
       align-items: center;
       gap: 10px;
+      margin-bottom: 10px;
 
       @media (max-width: 768px) {
         flex-wrap: wrap;
@@ -17,7 +23,7 @@
 
       .blog-card-category {
         @include text-category;
-        color: $primaryColor;
+        color: $subtitle_color;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -29,23 +35,26 @@
           flex-shrink: 0;
           width: 117px;
           height: 1px;
-          background-color: $border-category;
+          background-color: $subtitle_color;
           transition: all 0.4s ease;
         }
       }
 
       .blog-card-date {
         @include text-small;
-        color: $primaryColor;
+        color: $subtitle_color;
       }
     }
 
     h1 {
-      max-width: 900px;
+      color: $white;
+      max-width: 760px;
+      margin-bottom: 100px;
     }
 
     .single-post-img {
-      max-width: 736px;
+      max-width: 680px;
+      margin: 0 auto;
 
       img {
         width: 100%;
@@ -78,7 +87,8 @@
       h4,
       h5,
       h6 {
-        @include title-single-post;
+        @include title-content-post;
+        color: $black;
         margin: 0;
       }
 
@@ -173,12 +183,6 @@
       text-decoration: none;
       transition: color 0.3s;
 
-      img {
-        width: 10px;
-        height: 10px;
-        transition: transform 0.4s;
-      }
-
       span {
         @include btn-card-blog;
         color: $black;
@@ -192,18 +196,14 @@
         bottom: -2px;
         left: 0;
         width: 0;
-        height: 2px;
-        background-color: $primaryColor;
+        height: 1px;
+        background-color: $black;
         transition: width 0.3s;
       }
 
       &:hover {
         span {
-          color: $primaryColor;
-        }
-
-        img {
-          transform: translateX(5px);
+          color: $black;
         }
 
         &:after {

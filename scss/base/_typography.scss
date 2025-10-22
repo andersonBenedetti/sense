@@ -197,6 +197,14 @@ $font-secondary: "Bodoni Moda", serif;
   line-height: 59px;
 }
 
+@mixin title-content-post {
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 2.5em;
+  line-height: 44.5px;
+}
+
 @mixin category-product {
   font-weight: 700;
   font-size: 0.75em;

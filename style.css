@@ -3032,7 +3032,7 @@ ul {
 
 #page-template .intro {
   padding: 50px 0;
-  background-color: #14506a;
+  background-color: #000000;
   margin-bottom: 50px;
 }
 #page-template .intro h1 {
@@ -3753,16 +3753,16 @@ label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
 }
 
 #pg-single .section-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 50px 20px;
+  background: linear-gradient(to bottom, #000000 0%, #000000 80%, #ffffff 80%, #ffffff 100%);
+  padding-top: 150px;
+  position: relative;
+  z-index: 1;
 }
 #pg-single .section-intro .blog-card-top {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 10px;
 }
 @media (max-width: 768px) {
   #pg-single .section-intro .blog-card-top {
@@ -3775,7 +3775,7 @@ label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
   line-height: 1;
   letter-spacing: 7px;
   text-transform: uppercase;
-  color: #14506a;
+  color: #999999;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -3787,20 +3787,23 @@ label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
   flex-shrink: 0;
   width: 117px;
   height: 1px;
-  background-color: #ede1c9;
+  background-color: #999999;
   transition: all 0.4s ease;
 }
 #pg-single .section-intro .blog-card-top .blog-card-date {
   font-size: 0.875em;
   font-weight: 400;
   line-height: 24px;
-  color: #14506a;
+  color: #999999;
 }
 #pg-single .section-intro h1 {
-  max-width: 900px;
+  color: #ffffff;
+  max-width: 760px;
+  margin-bottom: 100px;
 }
 #pg-single .section-intro .single-post-img {
-  max-width: 736px;
+  max-width: 680px;
+  margin: 0 auto;
 }
 #pg-single .section-intro .single-post-img img {
   width: 100%;
@@ -3831,9 +3834,12 @@ label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
 #pg-single .section-content .single-post-content h4,
 #pg-single .section-content .single-post-content h5,
 #pg-single .section-content .single-post-content h6 {
-  font-weight: 200;
-  font-size: 2em;
-  line-height: 59px;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 2.5em;
+  line-height: 44.5px;
+  color: #000000;
   margin: 0;
 }
 #pg-single .section-content .single-post-content a {
@@ -3915,11 +3921,6 @@ label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
   text-decoration: none;
   transition: color 0.3s;
 }
-#pg-single .section-blog-navigation a img {
-  width: 10px;
-  height: 10px;
-  transition: transform 0.4s;
-}
 #pg-single .section-blog-navigation a span {
   font-weight: 300;
   font-size: 0.75em;
@@ -3936,15 +3937,12 @@ label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
   bottom: -2px;
   left: 0;
   width: 0;
-  height: 2px;
-  background-color: #14506a;
+  height: 1px;
+  background-color: #000000;
   transition: width 0.3s;
 }
 #pg-single .section-blog-navigation a:hover span {
-  color: #14506a;
-}
-#pg-single .section-blog-navigation a:hover img {
-  transform: translateX(5px);
+  color: #000000;
 }
 #pg-single .section-blog-navigation a:hover:after {
   width: 100%;
